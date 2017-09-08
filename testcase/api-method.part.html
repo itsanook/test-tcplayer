@@ -1,0 +1,39 @@
+<div id="tcplayer"></div>
+<div class="row" style="margin-top: 16px;">
+  <div class="col-md-12">
+    <button class="btn btn-default" id="play">Play()</button>
+    <button class="btn btn-default" id="pause">Pause()</button>
+    <button class="btn btn-default" id="togglePlay">togglePlay()</button>
+    <button class="btn btn-default" id="muteTrue">mute(true)</button>
+    <button class="btn btn-default" id="muteFalse">mute(false)</button>
+  </div>
+</div>
+<script>
+  var player = new TcPlayer('tcplayer', {
+    m3u8: '//1252569596.vod2.myqcloud.com/ae145d52vodtranssgp1252569596/90e2525b9031868223040571218/slq1tka6lIEA.f230.m3u8',
+    autoplay: false,
+    coverpic: '//via.placeholder.com/480x320',
+    width: 480,
+    height: 320
+  });
+
+  $('#play').click(function() {
+    player.play();
+  });
+
+  $('#pause').click(function() {
+    player.pause();
+  });
+
+  $('#togglePlay').click(function() {
+    player.togglePlay();
+  });
+
+  $('#muteTrue').click(function() {
+    player.mute(true);
+  });
+
+  $('#muteFalse').click(function() {
+    player.mute(false);
+  });
+</script>

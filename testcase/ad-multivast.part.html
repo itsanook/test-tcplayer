@@ -1,0 +1,49 @@
+<div id="tcplayer"></div>
+<script>
+  var adTag = 'https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dlinear&correlator=';
+  var adPrePlayed = false;
+  var adMidPlayed = false;
+  var adPostPlayed = false;
+  var player = new TcPlayer('tcplayer', {
+    m3u8: '//1252569596.vod2.myqcloud.com/ae145d52vodtranssgp1252569596/90e2525b9031868223040571218/slq1tka6lIEA.f230.m3u8',
+    autoplay: false,
+    coverpic: '//via.placeholder.com/480x320',
+    width: 480,
+    height: 320,
+    auth: {
+      user_id: 'Ake@tencent.co.th',
+      app_id: 'G54eGYZ4AQavvYkK',
+      license: 'aErVaSe2DvN5ze3658wJjYqaK3tTIPuF'
+    },
+    listener: function(e) {
+      switch (e.type) {
+        case 'play':
+          // play pre-roll ad
+          if (!adPrePlayed) {
+            player.playAd(adTag);
+            adPrePlayed = true;
+          }
+          break;
+
+        case 'ended':
+          // play post-roll ad
+          if (!adPostPlayed) {
+            player.playAd(adTag);
+            adPostPlayed = true;
+          }
+          break;
+
+        case 'timeupdate':
+          var totalTime = player.duration();
+          var currentTime = player.currentTime();
+
+          // play mid-roll ad
+          if (!adMidPlayed && totalTime > 0 && currentTime / totalTime > 0.5) {
+            player.playAd(adTag);
+            adMidPlayed = true;
+          }
+          break;
+      }
+    }
+  });
+</script>
