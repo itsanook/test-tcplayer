@@ -132,9 +132,9 @@ $testcase_html = $testcase !== NULL && file_exists("testcase/{$testcase->file}")
 <html>
 <head>
   <title>Tencent Player Test</title>
-  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <script src="bower_components/jquery/dist/jquery.min.js"></script>
-  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/css/bootstrap.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/js/bootstrap.min.js"></script>
   <script src="//imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
   <script src="<?php echo $script; ?>"></script>
 </head>
