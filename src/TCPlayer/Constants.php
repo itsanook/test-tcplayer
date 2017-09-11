@@ -76,7 +76,10 @@ class Constants {
         "ad-multivast.part.html",
         "Ad: Multi-Vast",
         "Ad is displayed at pre, mid, and end of the video",
-        "Occasionally exceptions thrown e.g. Uncaught Error: playAd called when not ready, and few other exceptions",
+        "Occasionally exceptions thrown e.g.
+* Uncaught Error: The play() request was interrupted by a call to pause(),
+* Uncaught DOMException: Failed to read the 'buffered' property from 'SourceBuffer',
+and few other exceptions",
         FALSE
       ),
       "error-custom" => new Testcase(
