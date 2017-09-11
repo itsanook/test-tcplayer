@@ -1,0 +1,23 @@
+<div id="tcplayer"></div>
+<script>
+  var player = new TcPlayer('tcplayer', {
+    m3u8: '//1252569596.vod2.myqcloud.com/ae145d52vodtranssgp1252569596/90e2525b9031868223040571218/slq1tka6lIEA.f230.m3u8',
+    autoplay: false,
+    coverpic: '//via.placeholder.com/480x320',
+    width: 480,
+    height: 320,
+    auth: {
+      user_id: 'Ake@tencent.co.th',
+      app_id: 'G54eGYZ4AQavvYkK',
+      license: 'aErVaSe2DvN5ze3658wJjYqaK3tTIPuF'
+    },
+    listener: function(e) {
+      switch (e.type) {
+        case 'loadedmetadata':
+          console.log('loadedmetadata is fired so we are ready for playback');
+          console.log('video duration: ' + player.duration());
+          break;
+      }
+    }
+  });
+</script>

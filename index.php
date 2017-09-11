@@ -44,14 +44,9 @@ $TESTCASES = [
     "multi-bitrates.part.html",
     "Play: Multiple bitrates",
     "Supports 240p, 360p, 480p, 720p, 1080p and auto-scale to the best resolution",
-    "1) It only auto-scale to 360p whereas my network is at 1Gbps, 2) Auto should also display the resolution used, 3) Please copy Youtube (https://www.youtube.com/watch?v=9e4NWnCsrl8), 4) Bitrate selection must be available regardless of flag autoLevel",
-    FALSE
-  ),
-  "play-multi-birates-2" => new Testcase(
-    "multi-bitrates-2.part.html",
-    "Play: Multiple bitrates",
-    "Supports 240p, 360p, 480p, 720p, 1080p and auto-scale to the best resolution",
-    "1) It only auto-scale to 360p whereas my network is at 1Gbps",
+    "1) It only auto-scale to 360p whereas my network is at 1Gbps
+2) Auto should also display the resolution used
+3) Bitrate selection must be available regardless of flag autoLevel",
     FALSE
   ),
   "play-volumn" => new Testcase(
@@ -78,9 +73,9 @@ $TESTCASES = [
   "ui-responsive" => new Testcase(
     "responsive.part.html",
     "UI: Responsive",
-    "",
-    "",
-    TRUE
+    "All UI should be responsive",
+    "The cover image is not responsively adjusted to the frame size",
+    FALSE
   ),
   "ad-autoplay" => new Testcase(
     "ad-autoplay.part.html",
@@ -93,7 +88,7 @@ $TESTCASES = [
     "ad-multivast.part.html",
     "Ad: Multi-Vast",
     "Ad is displayed at pre, mid, and end of the video",
-    "1) piggybacking to the QCloud should be optional, 2) occasionally exceptions thrown e.g. Uncaught Error: playAd called when not ready, and few other exceptions",
+    "Occasionally exceptions thrown e.g. Uncaught Error: playAd called when not ready, and few other exceptions",
     FALSE
   ),
   "error-custom" => new Testcase(
@@ -116,6 +111,22 @@ $TESTCASES = [
     "Capable of detecting events",
     "Events correctly printed to console",
     TRUE
+  ),
+  "seperator-01" => "<hr/>",
+  "event-ready" => new Testcase(
+    "event-ready.part.html",
+    "API: Event - Ready",
+    "Able to detect when the video is ready for playback",
+    "The event loadedmetadata is fired. The event fires when \"the user agent has just determined the duration and dimensions of the media resource\"
+Ref: https://www.w3.org/wiki/HTML/Elements/video#Media_Events",
+    TRUE
+  ),
+  "event-player-ready" => new Testcase(
+    "event-ready.part.html",
+    "API: Event - Player Ready",
+    "Able to detect when the player is initialized and is ready for playback. This is the earliest point at which any API calls e.g. playAd should be made.",
+    "No such events",
+    FALSE
   ),
 ];
 $testcase_key = array_key_exists('t', $_REQUEST)
@@ -140,7 +151,7 @@ $testcase_html = $testcase !== NULL && file_exists("testcase/{$testcase->file}")
 </head>
 <body>
 <div class="container">
-  <div class="col-sm-2">
+  <div class="col-sm-3">
     <h4>Scripts</h4>
     <div class="dropdown">
       <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
@@ -161,19 +172,23 @@ $testcase_html = $testcase !== NULL && file_exists("testcase/{$testcase->file}")
     <h4>Test Cases</h4>
     <ul class="list-unstyled">
       <?php foreach ($TESTCASES as $k => $val): ?>
-        <li>
-          <a
-            href="?t=<?php echo $k; ?>&s=<?php echo $script_key; ?>"
-            style="padding-left:2px;border-left:solid 2px <?php echo $k === $testcase_key ? '#337ab7' : 'transparent'; ?>"
-          >
-            <?php echo $val->pass ? '✔' : '✘'; ?>
-            <?php echo $val->title; ?>
-          </a>
-        </li>
+        <?php if ($val instanceof Testcase): ?>
+          <li>
+            <a
+              href="?t=<?php echo $k; ?>&s=<?php echo $script_key; ?>"
+              style="padding-left:2px;border-left:solid 2px <?php echo $k === $testcase_key ? '#337ab7' : 'transparent'; ?>"
+            >
+              <?php echo $val->pass ? '✔' : '✘'; ?>
+              <?php echo $val->title; ?>
+            </a>
+          </li>
+        <?php else: ?>
+          <?php echo $val; ?>
+        <?php endif; ?>
       <?php endforeach; ?>
     </ul>
   </div>
-  <div class="col-sm-10">
+  <div class="col-sm-9">
     <?php if ($testcase !== NULL): ?>
       <h1 style="margin-top:8px"><?php echo $testcase->title ?></h1>
       <div class="panel panel-default">
@@ -194,7 +209,7 @@ $testcase_html = $testcase !== NULL && file_exists("testcase/{$testcase->file}")
       </div>
       <div class="panel panel-info">
         <div class="panel-heading">Expected Results</div>
-        <div class="panel-body"><?php echo $testcase->expected; ?></div>
+        <div class="panel-body"><?php echo nl2br(htmlspecialchars($testcase->expected)); ?></div>
       </div>
       <div class="panel <?php echo $testcase->pass ? "panel-success" : "panel-danger"; ?>">
         <div class="panel-heading">
@@ -203,10 +218,10 @@ $testcase_html = $testcase !== NULL && file_exists("testcase/{$testcase->file}")
             <span class="label label-danger">FAILED</span>
           <?php endif; ?>
         </div>
-        <div class="panel-body"><?php echo $testcase->actual; ?></div>
+        <div class="panel-body"><?php echo nl2br(htmlspecialchars($testcase->actual)); ?></div>
       </div>
     <?php else: ?>
-      <div class="alert alert-info">Please select a test case from the menu</div>
+      <div class="alert alert-info" style="margin-top:16px;">Please select a test case from the menu</div>
     <?php endif; ?>
   </div>
 </div>
