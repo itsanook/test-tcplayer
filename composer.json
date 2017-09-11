@@ -1,0 +1,8 @@
+{
+  "name": "tencent-th/test-tcplayer",
+  "license": "Unlicense",
+  "require": {},
+  "autoload": {
+    "psr-4": {"TencentTH\\": "src/"}
+  }
+}

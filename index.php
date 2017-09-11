@@ -1,29 +1,18 @@
 <?php
 
-// https://cloud.tencent.com/document/product/267/9498
+/**
+ * Test cases for TCPlayer
+ * Documentation: https://cloud.tencent.com/document/product/267/9498
+ */
 
-class Testcase {
-  public $file;
-  public $title;
-  public $expected;
-  public $actual;
-  public $pass;
+include "vendor/autoload.php";
 
-  public function __construct($file, $title, $expected, $actual, $pass) {
-    $this->file = $file;
-    $this->title = $title;
-    $this->expected = $expected;
-    $this->actual = $actual;
-    $this->pass = $pass;
-  }
-}
+use TencentTH\TCPlayer\Testcase;
+use TencentTH\TCPlayer\Constants;
 
-$SCRIPTS = [
-  "vod-ima-0.1.0" => "vendor-ext/tcplayer/vod-ima-0.1.0.js",
-  "vod-ima-0.1.1" => "vendor-ext/tcplayer/vod-ima-0.1.1.js",
-  "vod-ima-0.1.3" => "vendor-ext/tcplayer/vod-ima-0.1.3.js",
-  "TcPlayer-2.2.0.js" => "//imgcache.qq.com/open/qcloud/video/vcplayer/TcPlayer-2.2.0.js"
-];
+$SCRIPTS = Constants::getScripts();
+$TESTCASES = Constants::getTestcases();
+
 $script_key = array_key_exists('s', $_REQUEST)
   ? $_REQUEST['s']
   : "vod-ima-0.1.3";
@@ -31,104 +20,6 @@ $script = array_key_exists($script_key, $SCRIPTS)
   ? $SCRIPTS[$script_key]
   : NULL;
 
-/** @var \Testcase[] $TESTCASES */
-$TESTCASES = [
-  "play" => new Testcase(
-    "play.part.html",
-    "Play",
-    "Able to playback the video and audio",
-    "The video can be played and audio can be heard but the piggybacking to the reporting server failed over SSL as well as there is no option to disable it",
-    FALSE
-  ),
-  "play-multi-birates" => new Testcase(
-    "multi-bitrates.part.html",
-    "Play: Multiple bitrates",
-    "Supports 240p, 360p, 480p, 720p, 1080p and auto-scale to the best resolution",
-    "1) It only auto-scale to 360p whereas my network is at 1Gbps
-2) Auto should also display the resolution used
-3) Bitrate selection must be available regardless of flag autoLevel",
-    FALSE
-  ),
-  "play-volumn" => new Testcase(
-    "play.part.html",
-    "Play: Volumn",
-    "Volumn settings is maintained across page refresh",
-    "Volumn settings is maintained across page refresh",
-    TRUE
-  ),
-  "ui-volumn" => new Testcase(
-    "play.part.html",
-    "UI: Volumn",
-    "Volumn button is correctly displayed on mouseover",
-    "It is correctly displayed",
-    TRUE
-  ),
-  "ui-onpause" => new Testcase(
-    "play.part.html",
-    "UI: On Pause",
-    "The video is paused and no audio plays",
-    "The video screen is paused and audio is muted",
-    TRUE
-  ),
-  "ui-responsive" => new Testcase(
-    "responsive.part.html",
-    "UI: Responsive",
-    "All UI should be responsive",
-    "The cover image is not responsively adjusted to the frame size",
-    FALSE
-  ),
-  "ad-autoplay" => new Testcase(
-    "ad-autoplay.part.html",
-    "Ad: Autoplay ?",
-    "Linear preroll ad is displayed when the video has autoplay set",
-    "Ads correctly shown every time",
-    TRUE
-  ),
-  "ad-multivast" => new Testcase(
-    "ad-multivast.part.html",
-    "Ad: Multi-Vast",
-    "Ad is displayed at pre, mid, and end of the video",
-    "Occasionally exceptions thrown e.g. Uncaught Error: playAd called when not ready, and few other exceptions",
-    FALSE
-  ),
-  "error-custom" => new Testcase(
-    "error-custom.part.html",
-    "Error: Messages",
-    "Custom error message is displayed",
-    "Custom error message is displayed",
-    TRUE
-  ),
-  "api-method" => new Testcase(
-    "api-method.part.html",
-    "API: Methods",
-    "Basic methods such as play, pause, togglePlay and mute are working correctly.",
-    "All basic method works correctly.",
-    TRUE
-  ),
-  "listener" => new Testcase(
-    "api-listener.part.html",
-    "API: Events",
-    "Capable of detecting events",
-    "Events correctly printed to console",
-    TRUE
-  ),
-  "seperator-01" => "<hr/>",
-  "event-ready" => new Testcase(
-    "event-ready.part.html",
-    "API: Event - Ready",
-    "Able to detect when the video is ready for playback",
-    "The event loadedmetadata is fired. The event fires when \"the user agent has just determined the duration and dimensions of the media resource\"
-Ref: https://www.w3.org/wiki/HTML/Elements/video#Media_Events",
-    TRUE
-  ),
-  "event-player-ready" => new Testcase(
-    "event-ready.part.html",
-    "API: Event - Player Ready",
-    "Able to detect when the player is initialized and is ready for playback. This is the earliest point at which any API calls e.g. playAd should be made.",
-    "No such events",
-    FALSE
-  ),
-];
 $testcase_key = array_key_exists('t', $_REQUEST)
   ? $_REQUEST['t']
   : NULL;
