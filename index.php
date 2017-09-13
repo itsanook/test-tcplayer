@@ -15,7 +15,7 @@ $TESTCASES = Constants::getTestcases();
 
 $script_key = array_key_exists('s', $_REQUEST)
   ? $_REQUEST['s']
-  : "vod-ima-0.1.3";
+  : "vod-ima-0.1.4";
 $script = array_key_exists($script_key, $SCRIPTS)
   ? $SCRIPTS[$script_key]
   : NULL;
