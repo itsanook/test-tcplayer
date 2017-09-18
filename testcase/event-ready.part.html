@@ -17,6 +17,10 @@
           console.log('loadedmetadata is fired so we are ready for playback');
           console.log('video duration: ' + player.duration());
           break;
+        case 'ready':
+          console.log('ready is fired so we are ready for playback');
+          console.log('video duration: ' + player.duration());
+          break;
       }
     }
   });
