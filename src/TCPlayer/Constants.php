@@ -27,16 +27,16 @@ class Constants {
         "play.part.html",
         "Play",
         "Able to playback the video and audio",
-        "The video can be played and audio can be heard but the piggybacking to the reporting server failed over SSL as well as there is no option to disable it",
+        "1) The video can be played and audio can be heard but the piggybacking to the reporting server failed over SSL as well as there is no option to disable it
+2) Occasionally error XMLHttpRequest cannot load http://tcplayer.qcloud.com/api/tcplayer/sync. Response for preflight is invalid (redirect)
+3) Bitrate should display the actual bitrate, not Src1",
         FALSE
       ),
       "play-multi-birates" => new Testcase(
         "multi-bitrates.part.html",
         "Play: Multiple bitrates",
         "Supports 240p, 360p, 480p, 720p, 1080p and auto-scale to the best resolution",
-        "1) It only auto-scale to 360p whereas my network is at 1Gbps
-2) Auto should also display the resolution used
-3) Bitrate selection must be available regardless of flag autoLevel",
+        "1) It only auto-scale to 360p whereas my network is at 1Gbps",
         FALSE
       ),
       "play-volumn" => new Testcase(
@@ -64,8 +64,8 @@ class Constants {
         "responsive.part.html",
         "UI: Responsive",
         "All UI should be responsive",
-        "The cover image is not responsively adjusted to the frame size",
-        FALSE
+        "All UI is responsive",
+        TRUE
       ),
       "ad-autoplay" => new Testcase(
         "ad-autoplay.part.html",
@@ -102,8 +102,8 @@ and few other exceptions",
         "api-listener.part.html",
         "API: Events",
         "Capable of detecting events",
-        "Events correctly printed to console",
-        TRUE
+        "No ad events",
+        FALSE
       ),
       "seperator-01" => "<hr/>",
       "event-ready" => new Testcase(
