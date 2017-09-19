@@ -103,7 +103,7 @@ and few other exceptions",
         "API: Events",
         "Capable of detecting events",
         "No ad events",
-        FALSE
+        TRUE
       ),
       "seperator-01" => "<hr/>",
       "event-ready" => new Testcase(
