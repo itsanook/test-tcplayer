@@ -118,8 +118,8 @@ Ref: https://www.w3.org/wiki/HTML/Elements/video#Media_Events",
         "event-ready.part.html",
         "API: Event - Player Ready",
         "Able to detect when the player is initialized and is ready for playback. This is the earliest point at which any API calls e.g. playAd should be made.",
-        "No such events",
-        FALSE
+        "The event is ready",
+        TRUE
       ),
     ];
   }
