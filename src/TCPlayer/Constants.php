@@ -102,7 +102,7 @@ and few other exceptions",
         "api-listener.part.html",
         "API: Events",
         "Capable of detecting events",
-        "No ad events",
+        "Support all events.",
         TRUE
       ),
       "seperator-01" => "<hr/>",
