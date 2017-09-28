@@ -28,8 +28,7 @@ class Constants {
         "Play",
         "Able to playback the video and audio",
         "1) The video can be played and audio can be heard but the piggybacking to the reporting server failed over SSL as well as there is no option to disable it
-2) Occasionally error XMLHttpRequest cannot load http://tcplayer.qcloud.com/api/tcplayer/sync. Response for preflight is invalid (redirect)
-3) Bitrate should display the actual bitrate, not Src1",
+2) Occasionally error XMLHttpRequest cannot load http://tcplayer.qcloud.com/api/tcplayer/sync. Response for preflight is invalid (redirect)",
         FALSE
       ),
       "play-multi-birates" => new Testcase(
