@@ -24,6 +24,28 @@ class Constants {
    */
   public static function getTestcases() {
     return [
+      "title" => new Testcase(
+        "title.part.html",
+        "Title",
+        "Able to specify title and URL link",
+        "Unable to specify URL link",
+        FALSE
+      ),
+      "watermark" => new Testcase(
+        "watermark.part.html",
+        "Watermark",
+        "Logo is shown",
+        "No logo shown",
+        FALSE
+      ),
+      "related" => new Testcase(
+        "related.part.html",
+        "Related",
+        "Related is shown",
+        "No related shown",
+        FALSE
+      ),
+      "seperator-00" => "<hr/>",
       "play" => new Testcase(
         "play.part.html",
         "Play",
