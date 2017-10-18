@@ -28,38 +28,39 @@ class Constants {
         "title.part.html",
         "Title",
         "Able to specify title and URL link",
-        "Unable to specify URL link",
+        "1) Unable to specify URL link
+2) The title layer makes bitrate AUTO un-selectable",
         FALSE
       ),
       "watermark" => new Testcase(
         "watermark.part.html",
         "Watermark",
         "Logo is shown",
-        "No logo shown",
-        FALSE
+        "Logo is shown",
+        TRUE
       ),
       "related" => new Testcase(
         "related.part.html",
         "Related",
         "Related is shown",
-        "No related shown",
-        FALSE
+        "Related is shown",
+        TRUE
       ),
       "seperator-00" => "<hr/>",
       "play" => new Testcase(
         "play.part.html",
         "Play",
         "Able to playback the video and audio",
-        "1) The video can be played and audio can be heard but the piggybacking to the reporting server failed over SSL as well as there is no option to disable it
-2) Occasionally error XMLHttpRequest cannot load http://tcplayer.qcloud.com/api/tcplayer/sync. Response for preflight is invalid (redirect)",
+        "1) No option to disable the report piggybacking
+2) The playback total duration changed from 14:06 to 14:07 after seeking the video",
         FALSE
       ),
       "play-multi-birates" => new Testcase(
         "multi-bitrates.part.html",
         "Play: Multiple bitrates",
         "Supports 240p, 360p, 480p, 720p, 1080p and auto-scale to the best resolution",
-        "1) It only auto-scale to 360p whereas my network is at 1Gbps",
-        FALSE
+        "Supports 240p, 360p, 480p, 720p, 1080p and auto-scale to the best resolution",
+        TRUE
       ),
       "play-volumn" => new Testcase(
         "play.part.html",
@@ -100,10 +101,13 @@ class Constants {
         "ad-multivast.part.html",
         "Ad: Multi-Vast",
         "Ad is displayed at pre, mid, and end of the video",
-        "Occasionally exceptions thrown e.g.
+        "1) Occasionally exceptions thrown e.g.
 * Uncaught Error: The play() request was interrupted by a call to pause(),
 * Uncaught DOMException: Failed to read the 'buffered' property from 'SourceBuffer',
-and few other exceptions",
+* Error: error play ad before adsManager is ready
+* Uncaught (in promise) DOMException: The play() request was interrupted by a new load request. https://goo.gl/LdLk22
+* Uncaught Error: IMA Handler playAd called when not ready
+2) Background expanded on ad play",
         FALSE
       ),
       "error-custom" => new Testcase(
