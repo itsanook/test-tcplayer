@@ -46,6 +46,13 @@ class Constants {
         "Related is shown",
         TRUE
       ),
+      "share" => new Testcase(
+        "share.part.html",
+        "Share",
+        "Share is shown",
+        "Embed text is not vertically middle aligned and the text is not visible if unselected",
+        TRUE
+      ),
       "seperator-00" => "<hr/>",
       "play" => new Testcase(
         "play.part.html",
