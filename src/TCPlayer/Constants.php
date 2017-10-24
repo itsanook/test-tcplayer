@@ -51,7 +51,14 @@ class Constants {
         "Share",
         "Share is shown",
         "Embed text is not vertically middle aligned and the text is not visible if unselected",
-        TRUE
+        FALSE
+      ),
+      "thumbnail" => new Testcase(
+        "thumbnail.part.html",
+        "Thumbnail",
+        "Thumbnail is shown",
+        "No thumbnail shownn",
+        FALSE
       ),
       "seperator-00" => "<hr/>",
       "play" => new Testcase(
