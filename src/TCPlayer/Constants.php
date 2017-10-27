@@ -74,7 +74,7 @@ class Constants {
         "Play: Multiple bitrates",
         "Supports 240p, 360p, 480p, 720p, 1080p and auto-scale to the best resolution",
         "1) iOS unable to select bitrate
-2) Android, Able to select bitrate for m3u8 video but not on mp4
+2) Android, Able to select bitrate for m3u8 video but not on mp4, please see working example from JWPlayer http://prepro.video.sanook.com/_experiment/player/sanook_player.php?file_type=mp4&ads_type=dfp
 3) Video does not stretch to the edge of the container",
         FALSE
       ),
