@@ -73,8 +73,10 @@ class Constants {
         "multi-bitrates.part.html",
         "Play: Multiple bitrates",
         "Supports 240p, 360p, 480p, 720p, 1080p and auto-scale to the best resolution",
-        "Supports 240p, 360p, 480p, 720p, 1080p and auto-scale to the best resolution",
-        TRUE
+        "1) iOS unable to select bitrate
+2) Android, Able to select bitrate for m3u8 video but not on mp4
+3) Video does not stretch to the edge of the container",
+        FALSE
       ),
       "play-volumn" => new Testcase(
         "play.part.html",
