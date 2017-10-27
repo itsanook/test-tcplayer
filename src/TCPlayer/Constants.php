@@ -144,8 +144,8 @@ class Constants {
         "api-listener.part.html",
         "API: Events",
         "Capable of detecting events",
-        "Support all events.",
-        TRUE
+        "Does not trigger adMetadata on some adTags",
+        FALSE
       ),
       "seperator-01" => "<hr/>",
       "event-ready" => new Testcase(
