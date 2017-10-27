@@ -43,8 +43,8 @@ class Constants {
         "related.part.html",
         "Related",
         "Related is shown",
-        "Related is shown",
-        TRUE
+        "1) Related positioning is wrong on resizing",
+        FALSE
       ),
       "share" => new Testcase(
         "share.part.html",
@@ -57,7 +57,7 @@ class Constants {
         "thumbnail.part.html",
         "Thumbnail",
         "Thumbnail is shown",
-        "No thumbnail shownn",
+        "1) Does not support IE11",
         FALSE
       ),
       "seperator-00" => "<hr/>",
