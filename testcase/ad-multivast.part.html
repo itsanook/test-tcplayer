@@ -17,7 +17,8 @@
     },
     listener: function(e) {
       switch (e.type) {
-        case 'loadedmetadata':
+        // case 'loadedmetadata':
+        case 'play':
           // play pre-roll ad
           if (!adPrePlayed) {
             player.playAd(adTag);
