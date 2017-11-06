@@ -15,7 +15,7 @@ class Constants {
       "vod-ima-0.1.4" => "vendor-ext/tcplayer/vod-ima-0.1.4.js",
       "vod-ima-0.1.6" => "vendor-ext/tcplayer/vod-ima-0.1.6-2.js",
       "vod-ima-0.1.10" => "vendor-ext/tcplayer/vod-ima-0.1.10.js",
-      "vod-ima-0.1.13" => "vendor-ext/tcplayer/vod-ima-0.1.13-5.js",
+      "vod-ima-0.1.13" => "vendor-ext/tcplayer/vod-ima-0.1.13-7.js",
       // "TcPlayer-2.2.0.js" => "//imgcache.qq.com/open/qcloud/video/vcplayer/TcPlayer-2.2.0.js"
     ];
   }
