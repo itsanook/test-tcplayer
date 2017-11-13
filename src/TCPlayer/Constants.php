@@ -51,8 +51,8 @@ class Constants {
         "share.part.html",
         "Share",
         "Share is shown",
-        "Embed text is not vertically middle aligned and the text is not visible if unselected",
-        FALSE
+        "Share is shown",
+        TRUE
       ),
       "thumbnail" => new Testcase(
         "thumbnail.part.html",
