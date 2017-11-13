@@ -30,9 +30,8 @@ class Constants {
         "title.part.html",
         "Title",
         "Able to specify title and URL link",
-        "1) Unable to specify URL link
-2) The title layer makes bitrate AUTO un-selectable",
-        FALSE
+        "Able to specify title and URL link",
+        TRUE
       ),
       "watermark" => new Testcase(
         "watermark.part.html",
