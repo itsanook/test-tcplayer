@@ -74,8 +74,7 @@ class Constants {
         "Play: Multiple bitrates",
         "Supports 240p, 360p, 480p, 720p, 1080p and auto-scale to the best resolution",
         "1) iOS unable to select bitrate
-2) Android, Able to select bitrate for m3u8 video but not on mp4, please see working example from JWPlayer http://prepro.video.sanook.com/_experiment/player/sanook_player.php?file_type=mp4&ads_type=dfp
-3) Video does not stretch to the edge of the container",
+2) Android, Able to select bitrate for m3u8 video but not on mp4, please see working example from JWPlayer http://prepro.video.sanook.com/_experiment/player/sanook_player.php?file_type=mp4&ads_type=dfp",
         FALSE
       ),
       "play-volumn" => new Testcase(
@@ -117,13 +116,8 @@ class Constants {
         "ad-multivast.part.html",
         "Ad: Multi-Vast",
         "Ad is displayed at pre, mid, and end of the video",
-        "1) Occasionally exceptions thrown e.g.
-* Uncaught Error: The play() request was interrupted by a call to pause(),
-* Uncaught DOMException: Failed to read the 'buffered' property from 'SourceBuffer',
-* Error: error play ad before adsManager is ready
-* Uncaught (in promise) DOMException: The play() request was interrupted by a new load request. https://goo.gl/LdLk22
-* Uncaught Error: IMA Handler playAd called when not ready",
-        FALSE
+        "Ad is displayed at pre, mid, and end of the video",
+        TRUE
       ),
       "error-custom" => new Testcase(
         "error-custom.part.html",
