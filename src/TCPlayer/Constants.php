@@ -44,8 +44,8 @@ class Constants {
         "related.part.html",
         "Related",
         "Related is shown",
-        "1) Related positioning is wrong on resizing",
-        FALSE
+        "Related is shown",
+        TRUE
       ),
       "share" => new Testcase(
         "share.part.html",
@@ -66,8 +66,7 @@ class Constants {
         "play.part.html",
         "Play",
         "Able to playback the video and audio",
-        "1) No option to disable the report piggybacking
-2) The playback total duration changed from 14:06 to 14:07 after seeking the video",
+        "1) No option to disable the report piggybacking",
         FALSE
       ),
       "play-multi-birates" => new Testcase(
@@ -123,8 +122,7 @@ class Constants {
 * Uncaught DOMException: Failed to read the 'buffered' property from 'SourceBuffer',
 * Error: error play ad before adsManager is ready
 * Uncaught (in promise) DOMException: The play() request was interrupted by a new load request. https://goo.gl/LdLk22
-* Uncaught Error: IMA Handler playAd called when not ready
-2) Background expanded on ad play",
+* Uncaught Error: IMA Handler playAd called when not ready",
         FALSE
       ),
       "error-custom" => new Testcase(
