@@ -105,9 +105,16 @@ class Constants {
         "All UI is responsive",
         TRUE
       ),
+      "ad-default" => new Testcase(
+        "ad-default.part.html",
+        "Ad: Play",
+        "Linear preroll ad is displayed when the video has autoplay set",
+        "Unable to display ad",
+        FALSE
+      ),
       "ad-autoplay" => new Testcase(
         "ad-autoplay.part.html",
-        "Ad: Autoplay ?",
+        "Ad: Autoplay",
         "Linear preroll ad is displayed when the video has autoplay set",
         "Ads correctly shown every time",
         TRUE
