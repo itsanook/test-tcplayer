@@ -140,7 +140,8 @@ else if(ads_type == 'dfp')
     { // mobile
         console.log('mobile');
         vastAdsURL={
-            "vast_linear": "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dlinear&correlator=",
+            // "vast_linear": "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dlinear&correlator=",
+            "vast_linear": "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dskippablelinear&correlator=",
             "vast_midroll": "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dlinear&correlator=",
             "vast_postroll":"https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dlinear&correlator="
         }
@@ -265,7 +266,8 @@ if(file_type == 'mp4')
                     {"title": "กบนอกกะลา : Teaser ขบวนพระบรมอิสริยยศ 1 (10 ต.ค.60)", "image":"https://p3.isanook.com/vi/0/ud/3/17/jpg/200/4003806.jpg", "link": "http://video.sanook.com/player/1151081/", "duration": 180},
             ]
         }, // /relateXml/1092653
-        "thumbnails": 'http://prepro.video.sanook.com/player/screenshot?tmb=1&duration='+paramsObj.duration+'&ssurl='+paramsObj.ss+'&ran=19718',
+        // "thumbnails": 'http://prepro.video.sanook.com/player/screenshot?tmb=1&duration='+paramsObj.duration+'&ssurl='+paramsObj.ss+'&ran=19718',
+        "thumbnails": '//test.topspace.com/tcplayer/vendor-ext/sanook/1092653.vtt',
 
         listener: function(e) {
             // console.log(e);
@@ -326,7 +328,8 @@ else if(file_type == 'm3u8')
                     {"title": "กบนอกกะลา : Teaser ขบวนพระบรมอิสริยยศ 1 (10 ต.ค.60)", "image":"https://p3.isanook.com/vi/0/ud/3/17/jpg/200/4003806.jpg", "link": "http://video.sanook.com/player/1151081/", "duration": 180},
             ]
         }, // /relateXml/1092653
-        "thumbnails": 'http://prepro.video.sanook.com/player/screenshot?tmb=1&duration='+paramsObj.duration+'&ssurl='+paramsObj.ss+'&ran=19718',
+        // "thumbnails": 'http://prepro.video.sanook.com/player/screenshot?tmb=1&duration='+paramsObj.duration+'&ssurl='+paramsObj.ss+'&ran=19718',
+        "thumbnails": '//test.topspace.com/tcplayer/vendor-ext/sanook/1092653.vtt',
 
         listener: function(e) {
             // console.log(e);
