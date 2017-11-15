@@ -10,7 +10,7 @@
 	  padding:3px;
   }
   .right{
-	  
+
 	  float:left;width:500px;
 	  border:1px solid #999999;
 	  padding:3px;
@@ -65,12 +65,12 @@ function showDebug(e,m){
         data=m;
     }
     // console.log(data);
-   
+
 
 
    msg="<div class='left'>"+type+"</div><div class='right'>"+data+"</div><br clear='all'>";
     document.getElementById("debug").innerHTML=document.getElementById("debug").innerHTML+msg;
-   
+
 }
 
 function is_mobile()
@@ -104,9 +104,9 @@ function is_ios()
 }
 
 
-var state = {}; 
+var state = {};
 state.adsType = '';
-state.prerollPlayed = false;	
+state.prerollPlayed = false;
 state.midrollPlayed = false;
 state.midrollPlayedStart = false;
 state.midrollStateSave = 0;
@@ -119,7 +119,7 @@ var ads_type = '<?=$_GET['ads_type']?>';
 if(ads_type =='vpaid')
 {
     vastAdsURL={
-	    "vast_linear": "http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=is&c=23&pl=VAST&pli=10724976&PluID=0&pos=113&ord=%5btimestamp%5d&cim=1&t=1&ai=23227072",  
+	    "vast_linear": "http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=is&c=23&pl=VAST&pli=10724976&PluID=0&pos=113&ord=%5btimestamp%5d&cim=1&t=1&ai=23227072",
 		"vast_midroll": "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dskippablelinear&correlator=",
 		"vast_postroll":"https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dskippablelinear&correlator="
      }
@@ -131,7 +131,7 @@ else if(ads_type == 'dfp')
     {
         console.log('desktop');
         vastAdsURL={
-            "vast_linear": "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dskippablelinear&correlator=",  
+            "vast_linear": "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dskippablelinear&correlator=",
             "vast_midroll": "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dskippablelinear&correlator=",
             "vast_postroll":"https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dskippablelinear&correlator="
         }    }
@@ -139,25 +139,25 @@ else if(ads_type == 'dfp')
     { // mobile
         console.log('mobile');
         vastAdsURL={
-            "vast_linear": "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dlinear&correlator=",  
+            "vast_linear": "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dlinear&correlator=",
             "vast_midroll": "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dlinear&correlator=",
             "vast_postroll":"https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dlinear&correlator="
         }
 
     }
-    
+
 }
 else if(ads_type == 'third_party')
-{ 
+{
 	vastAdsURL={
-	    "vast_linear": "http://bs.serving-sys.com/Serving?cn=display&c=23&pl=VAST&pli=20266289&PluID=0&pos=5471&ord=419529&cim=1",  
+	    "vast_linear": "http://bs.serving-sys.com/Serving?cn=display&c=23&pl=VAST&pli=20266289&PluID=0&pos=5471&ord=419529&cim=1",
 		"vast_midroll": "http://bs.serving-sys.com/Serving?cn=display&c=23&pl=VAST&pli=20266289&PluID=0&pos=5471&ord=419529&cim=1",
 		"vast_postroll":"http://bs.serving-sys.com/Serving?cn=display&c=23&pl=VAST&pli=20266289&PluID=0&pos=5471&ord=419529&cim=1"
      }
 }
 else if(ads_type == 'error'){
     vastAdsURL={
-	    "vast_linear": "http://prepro.video.sanook.com/_experiment/player/empty_ads.xml",  
+	    "vast_linear": "http://prepro.video.sanook.com/_experiment/player/empty_ads.xml",
 		"vast_midroll": "http://prepro.video.sanook.com/_experiment/player/empty_ads.xml",
 		"vast_postroll":"http://prepro.video.sanook.com/_experiment/player/empty_ads.xml"
      }
@@ -165,8 +165,8 @@ else if(ads_type == 'error'){
 }
 else if(ads_type == 'noads'){
     vastAdsURL={
-	    "vast_linear": "",  
-		"vast_midroll": "",  
+	    "vast_linear": "",
+		"vast_midroll": "",
 		"vast_postroll":""
      }
 }
@@ -181,18 +181,18 @@ else if(ads_type == 'noads'){
 
 
 var playerOBJ;
-var file_type = '<?=$_GET['file_type']?>';	
+var file_type = '<?=$_GET['file_type']?>';
 var paramsObj = {
         'vdo_type': 'vdo',
         'vdo_link': 'http://video.sanook.com/player/1092653/',
         'file': {
-            'video': '/liveplay/1092653.m3u8',
+            'video': 'http://prepro.video.sanook.com/liveplay/1092653.m3u8',
         },
         'image': 'https://p3.isanook.com/vi/0/ud/3/17/jpg/197/3941970.jpg',
         'ss': 'https://p3.isanook.com/vi/0/ud/3/17/ss/197/3941970.jpg',
         'duration': '644',
         'embed': 'http://video.sanook.com/embed/player/1092653',
-        'relate_file': '/relateXml/1092653',
+        'relate_file': 'http://prepro.video.sanook.com/relateXml/1092653',
         'user': 'tvburabha',
         'youtube_type': '0',
         'controller': {
@@ -214,41 +214,41 @@ var paramsObj = {
 
 if(file_type == 'mp4')
 {
-    var vdo_options = 
+    var vdo_options =
     {
         "auth": {
             "app_id": "TUzewtzZthmfkGFx",
             "user_id": "puvanach@tencent.co.th",
             "license": "hDE3w8QbIgKNEKAaJt9gD9X4RpKhtxSc"
         },
-        "mp4" : 
+        "mp4" :
         {
             "240p" : "https://bmedia1.fsanook.com/3/17/HD/240p/197/3941970.mp4",
             "360p" : "https://bmedia1.fsanook.com/3/17/HD/360p/197/3941970.mp4",
             "720p HD" : "https://bmedia1.fsanook.com/3/17/HD/720p/197/3941970.mp4",
             "1080p HD" : "https://bmedia1.fsanook.com/3/17/HD/1080p/197/3941970.mp4"
         },
-        
+
         "autoLevel": true,
         "playerid":"content_video",
         // "coverpic": {"style":"stretch", "src":"http://p3.isanook.com/vi/0/ud/3/17/jpg/197/3941970.jpg"},
         "width" : '640',
         "height" : '360',
-        "autoplay" : false, 
+        "autoplay" : false,
 
         "watermark": {
             "image": "http://video.sanook.com/assets/vi/di/logo_sn.png",
             "link": "http://video.sanook.com"
         },
         "title": "กบนอกกะลา : ตุ๊กแก เซเลปราตรี ช่วงที่ 4/4 (15 มิ.ย.60)",
-        "share": 
+        "share":
         {
                 "facebook": true,   //default false
                 "twitter": true,       //default false
                 "google": true,              //default false
                 "code": '<iframe width="560" height="315" src="'+paramsObj.embed+'" frameborder="0" allowfullscreen ></iframe>',
                 "title": "กบนอกกะลา : ตุ๊กแก เซเลปราตรี ช่วงที่ 4/4 (15 มิ.ย.60)",
-                "url": "http://video.sanook.com/player/1092653/" 
+                "url": "http://video.sanook.com/player/1092653/"
         },
         "relate": {
             items:[
@@ -260,7 +260,7 @@ if(file_type == 'mp4')
                     {"title": "กบนอกกะลา : Teaser ขบวนพระบรมอิสริยยศ 1 (10 ต.ค.60)", "image":"https://p3.isanook.com/vi/0/ud/3/17/jpg/200/4003806.jpg", "link": "http://video.sanook.com/player/1151081/", "duration": 180},
             ]
         }, // /relateXml/1092653
-        "thumbnails": '/player/screenshot?tmb=1&duration='+paramsObj.duration+'&ssurl='+paramsObj.ss+'&ran=19718', 
+        "thumbnails": 'http://prepro.video.sanook.com/player/screenshot?tmb=1&duration='+paramsObj.duration+'&ssurl='+paramsObj.ss+'&ran=19718',
 
         listener: function(e) {
             // console.log(e);
@@ -268,7 +268,7 @@ if(file_type == 'mp4')
         },
         onAdError: function(e){
             console.log(e);
-            showDebug(null, 'Ads event: '+e.l);	
+            showDebug(null, 'Ads event: '+e.l);
         },
         onAdEvent: function(e) {
             // console.log(e);
@@ -279,15 +279,15 @@ if(file_type == 'mp4')
 }
 else if(file_type == 'm3u8')
 {
-    var vdo_options = 
+    var vdo_options =
     {
         "auth": {
             "app_id": "TUzewtzZthmfkGFx",
             "user_id": "puvanach@tencent.co.th",
             "license": "hDE3w8QbIgKNEKAaJt9gD9X4RpKhtxSc"
         },
-        "m3u8": "/liveplay/1092653.m3u8",
-        
+        "m3u8": "http://prepro.video.sanook.com/liveplay/1092653.m3u8",
+
         "autoLevel": true,
         "playerid":"content_video",
         "coverpic": {"style":"stretch", "src":"http://p3.isanook.com/vi/0/ud/3/17/jpg/197/3941970.jpg"},
@@ -295,20 +295,20 @@ else if(file_type == 'm3u8')
         // "height": 'auto',
         "width" : '640',
         "height" : '360',
-        "autoplay" : false, 
+        "autoplay" : false,
         "watermark": {
             "image": "http://video.sanook.com/assets/vi/di/logo_sn.png",
             "link": "http://video.sanook.com"
         },
         "title": "กบนอกกะลา : ตุ๊กแก เซเลปราตรี ช่วงที่ 4/4 (15 มิ.ย.60)",
-        "share": 
+        "share":
         {
                 "facebook": true,   //default false
                 "twitter": true,       //default false
                 "google": true,              //default false
                 "code": '<iframe width="560" height="315" src="'+paramsObj.embed+'" frameborder="0" allowfullscreen ></iframe>',
                 "title": "กบนอกกะลา : ตุ๊กแก เซเลปราตรี ช่วงที่ 4/4 (15 มิ.ย.60)",
-                "url": "http://video.sanook.com/player/1092653/" 
+                "url": "http://video.sanook.com/player/1092653/"
         },
         "relate": {
                 items:[
@@ -320,7 +320,7 @@ else if(file_type == 'm3u8')
                     {"title": "กบนอกกะลา : Teaser ขบวนพระบรมอิสริยยศ 1 (10 ต.ค.60)", "image":"https://p3.isanook.com/vi/0/ud/3/17/jpg/200/4003806.jpg", "link": "http://video.sanook.com/player/1151081/", "duration": 180},
             ]
         }, // /relateXml/1092653
-        "thumbnails": '/player/screenshot?tmb=1&duration='+paramsObj.duration+'&ssurl='+paramsObj.ss+'&ran=19718', 
+        "thumbnails": 'http://prepro.video.sanook.com/player/screenshot?tmb=1&duration='+paramsObj.duration+'&ssurl='+paramsObj.ss+'&ran=19718',
 
         listener: function(e) {
             // console.log(e);
@@ -328,7 +328,7 @@ else if(file_type == 'm3u8')
         },
         onAdError: function(e){
             console.log(e);
-            showDebug(null, 'Ads event: '+e.l);	
+            showDebug(null, 'Ads event: '+e.l);
         },
         onAdEvent: function(e) {
             // console.log(e);
@@ -345,12 +345,12 @@ var adsManager;
 var adsLoader;
 var intervalTimer;
 
-var Ads = function() 
+var Ads = function()
 {
 
-   
 
-    
+
+
     Ads.prototype.init = function()
     {
 
@@ -360,52 +360,52 @@ var Ads = function()
 
 
     Ads.prototype.controlPlay = function(eventname) {
-        showDebug(null, 'Control Play Event ='+eventname);	
+        showDebug(null, 'Control Play Event ='+eventname);
 
         if(eventname=="initmobile"){
             this.init();
-            
+
         }else if(eventname=="initdesktop"){
-            
+
                this.init();
-              
+
         }else if(eventname=="desktop_no_setting_ad"){
-            
-             
+
+
         }else if(eventname=="mobile_no_setting_ad"){
-            
-             
+
+
         }else if(eventname=="checking_play_have_ads"){
-             
-             
+
+
              if(is_ios()){
 
             }else if(is_android()){
-                                     
-                
-                
+
+
+
              }
-       
+
         }else if(eventname=="makesure_video_not_play_before_ads"){
-             
+
                  if(is_android()){
-                       
+
                   }
-   
+
         }else if(eventname=="checking_play_have_ads_midroll"){
-           
-           
+
+
         }else if(eventname=="mobile_play_after_ad"){
-             
+
              if(is_ios()){
-   
-             }else if(is_android()){       
-                  
+
+             }else if(is_android()){
+
              }
-           
+
         }else if(eventname=="nextpreroll_noad"){
-             
-           
+
+
         }
 
 
@@ -424,7 +424,7 @@ var Ads = function()
                    console.log('midroll');
                    this.playMidroll();
                }
-              
+
 
             break;
             case 'AD_READY':
@@ -440,14 +440,14 @@ var Ads = function()
             case 'loadedmetadata':
                     console.log(event);
             break;
-            
+
             case 'play':
                 if(!state.prerollPlayed)
                 {
                     state.prerollPlayed = true;
                     console.log('preroll');
                     this.playPreroll();
-                    
+
                 }
             break;
 
@@ -457,10 +457,10 @@ var Ads = function()
                     state.postrollPlayed = true;
                     console.log('postroll');
                     this.playPostroll();
-                    
+
                 }
             break;
-            
+
         } // end switch
 
         if(event.type != 'progress' && event.type != 'timeupdate')
@@ -490,32 +490,32 @@ var Ads = function()
                 $('#ads_duration').html('ads duration: ' + duration);
             break;
             case 'allAdsCompleted':
-                
-                if (!state.prerollPlayed && !state.midrollPlayed && !state.postrollPlayed) {		
-                        
+
+                if (!state.prerollPlayed && !state.midrollPlayed && !state.postrollPlayed) {
+
                 		state.prerollPlayed = true;
                         showDebug(event, 'Ads Event : Preroll   finished');
-                        
+
                 		this.controlPlay("mobile_play_after_ad");
 
-                }else if (state.prerollPlayed && state.midrollPlayed && !state.postrollPlayed) {		
+                }else if (state.prerollPlayed && state.midrollPlayed && !state.postrollPlayed) {
                         state.midrollPlayed = true;
                          showDebug(event, 'Ads Event : Midroll   finished');
-                        
-                }else if (state.prerollPlayed && state.midrollPlayed && state.postrollPlayed) {	
+
+                }else if (state.prerollPlayed && state.midrollPlayed && state.postrollPlayed) {
                          state.postrollPlayed = true;
                          showDebug(event, 'Ads Event : Postroll  finished');
-                        
+
                 }
-                
-                
+
+
                 showDebug(event, 'Ads Event : ads  secment finished');
 
-                
+
             break;
 
             case 'impression':
-                            
+
             break;
             case 'firstquartile':
             break;
@@ -524,7 +524,7 @@ var Ads = function()
             case 'thirdquartile':
             break;
             case 'complete':
-                
+
             break;
             case 'click':
 
@@ -532,7 +532,7 @@ var Ads = function()
             case 'start':
             break;
             case 'skipped':
-            break;            
+            break;
         } // end switch
 
         if(event.type != 'adTimeUpdate')
@@ -540,15 +540,15 @@ var Ads = function()
             showDebug(event, 'Ads event: '+event.type);
 
         }
-        
+
     };
 
     Ads.prototype.currentTime = function() {
 
-       
+
         $('#timing').html('currentTime: '+this.player.currentTime());
         return Math.floor(this.player.currentTime());
-    };		
+    };
 
 
     Ads.prototype.durationTime = function() {
@@ -564,7 +564,7 @@ var Ads = function()
     };
 
     Ads.prototype.playPreroll = function() {
-	
+
         if(vastAdsURL.vast_linear!=""){
             state.adsType="preroll";
             showDebug(null, 'Ads Type:'+state.adsType+' || '+vastAdsURL.vast_linear);
@@ -574,19 +574,19 @@ var Ads = function()
     };
 
     Ads.prototype.playMidroll = function() {
-	
+
         if(vastAdsURL.vast_midroll!=""){
             state.adsType="midroll";
             showDebug(null, 'Ads Type:'+state.adsType+' || '+vastAdsURL.vast_midroll);
             this.player.playAd(vastAdsURL.vast_midroll);
             state.midrollPlayed = true;
         }
-	
+
     };
 
-        
+
     Ads.prototype.playPostroll = function() {
-        
+
         if(vastAdsURL.vast_postroll!=''){
             state.adsType="postroll";
             showDebug(null, 'Ads Type:'+state.adsType+' || '+vastAdsURL.vast_postroll);
@@ -594,8 +594,8 @@ var Ads = function()
             state.postrollPlayed = true;
         }else{
 
-        }	
-        
+        }
+
     };
 };
 
@@ -606,17 +606,17 @@ var Ads = function()
 
     document.write('<div id="videoplayer">Loading...</div><div>vod-ima-0.1.10.js</div><div id="ad_timing">ad timing: 0.0</div><div id="ads_duration">ads duration: 0.0</div><div id=\"duration">duration: 0.0</div><div id="timing">timing: 0.0</div><div id="debug">&nbsp;</div>');
 
-		
+
     var delayparam;
 		var delaynums=0;
-	
-		
-        playerOBJ = new Ads();  
+
+
+        playerOBJ = new Ads();
             if(is_mobile()){
                 playerOBJ.controlPlay('initmobile');
             }else{
                 playerOBJ.controlPlay('initdesktop'); //firstime
-            }	
+            }
 
 
 })();

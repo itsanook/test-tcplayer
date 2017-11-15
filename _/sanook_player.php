@@ -41,12 +41,12 @@
 			data=m;
 		}
 		// console.log(data);
-	
+
 
 
 	msg="<div class='left'>"+type+"</div><div class='right'>"+data+"</div><br clear='all'>";
 		document.getElementById("debug").innerHTML=document.getElementById("debug").innerHTML+msg;
-	
+
 	}
 </script>
 </head>
@@ -79,8 +79,8 @@ vast_linear_3party[0] = "http://bs.serving-sys.com/Serving?cn=display&c=23&pl=VA
 // vast_linear[2] = 'http://myaday.net/c/otv_ads.xml';
 /*vast_linear[1] = 'http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=is&c=23&pl=VAST&pli=17168283&PluID=0&pos=7416&ord=1461839545684&cim=1';
 vast_linear[2] = 'http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=is&c=23&pl=VAST&pli=17168576&PluID=0&pos=7347&ord=1461838580572&cim=1';
-vast_linear[3] = 'http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=is&c=23&pl=VAST&pli=17180387&PluID=0&pos=6165&ord=1461900109921&cim=1'; 
-vast_linear[4] = 'http://backoffice.video.sanook.com/communitygroup_/20140107-preload-Dplusfeb.html'; 
+vast_linear[3] = 'http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=is&c=23&pl=VAST&pli=17180387&PluID=0&pos=6165&ord=1461900109921&cim=1';
+vast_linear[4] = 'http://backoffice.video.sanook.com/communitygroup_/20140107-preload-Dplusfeb.html';
 vast_linear[5] = 'http://backoffice.video.sanook.com/communitygroup_/otv_ads.xml'; */
 
 var  vast_midroll = "http://myaday.net/c/adskip.php";
@@ -98,20 +98,20 @@ else if(ads_type == 'dfp')
     {
         console.log('desktop');
 		linears_link  = vast_linear[ads_idx];
-		
+
 	}
     else
     { // mobile
         console.log('mobile');
 		linears_link  = vast_linear[1];
-		
-    }	
+
+    }
 }
 else{
 	linears_link = vast_linear_3party[ads_idx];
 }
-			
-						
+
+
 			//$('#ads_url').html('<a href="'+linears_link+'" target="_blank">'+linears_link+'</a>');
 			$('#ads_url').html('<a href="'+linears_link+'" target="_blank">'+linears_link+'</a>');
 			nonelinears_link = '';
@@ -120,13 +120,13 @@ else{
 						'vdo_type': 'vdo',
 						'vdo_link': 'http://video.sanook.com/player/1092653/',
 						'file': {
-							'video': '/liveplay/1092653.m3u8',
+							'video': 'http://prepro.video.sanook.com/liveplay/1092653.m3u8',
 						},
 						'image': 'https://p3.isanook.com/vi/0/ud/3/17/jpg/197/3941970.jpg',
 						'ss': 'https://p3.isanook.com/vi/0/ud/3/17/ss/197/3941970.jpg',
 						'duration': '644',
 						'embed': 'http://video.sanook.com/embed/player/1092653',
-						'relate_file': '/relateXml/1092653',
+						'relate_file': 'http://prepro.video.sanook.com/relateXml/1092653',
 						'user': 'tvburabha',
 						'youtube_type': '0',
 						'controller': {
@@ -144,12 +144,12 @@ else{
 							'link': ''
 						}
 					};
-					
-				var file_type = '<?=$_GET['file_type']?>';	
+
+				var file_type = '<?=$_GET['file_type']?>';
 				if(file_type == 'mp4')
 				{
 					var _file = [
-						{ 
+						{
 							file: "https://bmedia1.fsanook.com/3/17/HD/240p/197/3941970.mp4", label: "240p"
 						},{
 							file: "https://bmedia1.fsanook.com/3/17/HD/360p/197/3941970.mp4", label: "360p"
@@ -165,8 +165,8 @@ else{
 					var _file = [{file: paramsObj.file.video}]
 				}
 
-				var trackObj = { 
-					file: '/player/screenshot?tmb=1&duration='+paramsObj.duration+'&ssurl='+paramsObj.ss+'&ran=19718', 
+				var trackObj = {
+					file: 'http://prepro.video.sanook.com/player/screenshot?tmb=1&duration='+paramsObj.duration+'&ssurl='+paramsObj.ss+'&ran=19718',
 					kind: "thumbnails"
 				}
 
@@ -207,11 +207,11 @@ else{
 						link: paramsObj.vdo_link
 					  },
 					  plugins: {
-						'/assets/vi/js/jwplayer-7.8.7/plugin/title_e.v1.1.js': {
+						'http://prepro.video.sanook.com/assets/vi/js/jwplayer-7.8.7/plugin/title_e.v1.1.js': {
 							text:'<a class="title-embed" style="cursor: pointer; color: #FFFFFF;" href="'+paramsObj.vdo_link+'" target="_blank" title="'+paramsObj.title+'" >'+paramsObj.title+'</a>'
 						}
 					},
-				   advertising: { 
+				   advertising: {
 					  client: "googima",
 					  schedule: ads_obj
 					},
@@ -219,27 +219,27 @@ else{
 						onTime : function(ev){
 							$('#timing').html('timing: ' + ev.position);
 							$('#duration').html('duration: ' + ev.duration);
-							
+
 						},//end onTime
 						onAdTime : function(ev){
 							// console.log('onAdTime');
 							// console.log(ev);
 							$('#ad_timing').html('ads timing: ' + ev.position);
 							$('#ads_duration').html('ads duration: ' + ev.duration);
-							
+
 						},//end onAdsTime
 						// adRequest : function(ev){
 						// 	// console.log('adRequest');
 						// 	console.log(ev);
 						// 	showDebug(ev, 'Ads Event: adRequest');
 						// },
-						
+
 						adStarted : function(ev){
 							// console.log('vpaid');
 							// console.log(ev);
 							showDebug(ev, 'Ads Event (VPAID only): adStarted');
 							showDebug(ev, 'creativetype: '+ev.creativetype+' || tag: '+ ev.tag);
-							
+
 						},
 						onAdClick : function(ev){
 							showDebug(ev, 'Ads Event: onAdClick');
@@ -272,48 +272,48 @@ else{
 						},
 					}
 
-								
-						
-					
+
+
+
 				  });
 
-				jwplayer('mediaplay').on('ready', function(ev) { 
+				jwplayer('mediaplay').on('ready', function(ev) {
 					console.log(ev);
 					// console.log('setup ready');
 					showDebug(ev, 'Player Event: setup ready, loading ='+ ev.setupTime/1000);
 				});
-				
-				jwplayer('mediaplay').on('beforePlay', function() { 
+
+				jwplayer('mediaplay').on('beforePlay', function() {
 					// console.log('beforePlay:');
 					showDebug(null, 'Player Event: beforePlay');
-				});			
-				jwplayer('mediaplay').on('pause', function(ev) { 
+				});
+				jwplayer('mediaplay').on('pause', function(ev) {
 					showDebug(ev, 'Player Event: OnPause');
-				});	
-				jwplayer('mediaplay').on('seek', function(ev) { 
+				});
+				jwplayer('mediaplay').on('seek', function(ev) {
 					showDebug(ev, 'Player Event: OnSeek to '+ ev.position);
-				});	
-				jwplayer('mediaplay').on('seeked', function() { 
+				});
+				jwplayer('mediaplay').on('seeked', function() {
 					showDebug(null, 'Player Event: OnSeeked');
-				});	
-				jwplayer('mediaplay').on('beforeComplete', function() { 
+				});
+				jwplayer('mediaplay').on('beforeComplete', function() {
 					showDebug(null, 'Player Event: beforeComplete');
-				});	
+				});
 
 
 
-				jwplayer('mediaplay').on('adPlay', function(ev) { 
+				jwplayer('mediaplay').on('adPlay', function(ev) {
 					showDebug(ev, 'Ads Event: adPlay');
-				});	
-				jwplayer('mediaplay').on('adPause', function(ev) { 
+				});
+				jwplayer('mediaplay').on('adPause', function(ev) {
 					showDebug(ev, 'Ads Event: adPause');
-				});	
-				jwplayer('mediaplay').on('adRequest', function(ev) { 
+				});
+				jwplayer('mediaplay').on('adRequest', function(ev) {
 					console.log(ev);
 					showDebug(ev, 'Ads Event: adRequest');
 					showDebug(ev, 'ad position: '+ ev.adposition +' || ads client: '+ ev.client+' || ads tag: '+ ev.tag);
-				});	
-				
+				});
+
 
 </script>
 
@@ -328,13 +328,13 @@ else{
 		padding:3px;
 	}
 	.right{
-		
+
 		float:left;width:500px;
 		border:1px solid #999999;
 		padding:3px;
 		background:#f2f2f2;
 	}
-  
+
 
 </style>
 
