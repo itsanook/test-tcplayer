@@ -26,7 +26,8 @@
 <script src="http://p3.isanook.com/sh/0/js/mobile-detect.min.js"></script>
 <script src="//imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
 <!-- <script src="//imgcache.qq.com/open/qcloud/video/vcplayer/TcPlayer-2.2.0.js" charset="utf-8"></script> -->
-<script src="http://test.topspace.com/tcplayer/vendor-ext/tcplayer/vod-ima-0.1.14.js"></script>
+<!-- <script src="http://test.topspace.com/tcplayer/vendor-ext/tcplayer/vod-ima-0.1.14.js"></script> -->
+<script src="http://p.ibg.wechatapp.com/bossapp_arthur/vod-ima-dev/js/vod-ima.js"></script>
 </head>
 <body>
 <script>
