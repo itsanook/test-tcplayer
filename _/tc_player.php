@@ -25,8 +25,8 @@
 <script src="http://p3.isanook.com/sh/0/js/jquery-1.8.3.min.js" type="text/javascript" ></script>
 <script src="http://p3.isanook.com/sh/0/js/mobile-detect.min.js"></script>
 <script src="//imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
-<script src="//imgcache.qq.com/open/qcloud/video/vcplayer/TcPlayer-2.2.0.js" charset="utf-8"></script>
-<script src="http://test.topspace.com/tcplayer/vendor-ext/tcplayer/vod-ima-0.1.10.js"></script>
+<!-- <script src="//imgcache.qq.com/open/qcloud/video/vcplayer/TcPlayer-2.2.0.js" charset="utf-8"></script> -->
+<script src="http://test.topspace.com/tcplayer/vendor-ext/tcplayer/vod-ima-0.1.14.js"></script>
 </head>
 <body>
 <script>
@@ -223,10 +223,14 @@ if(file_type == 'mp4')
         },
         "mp4" :
         {
-            "240p" : "https://bmedia1.fsanook.com/3/17/HD/240p/197/3941970.mp4",
-            "360p" : "https://bmedia1.fsanook.com/3/17/HD/360p/197/3941970.mp4",
-            "720p HD" : "https://bmedia1.fsanook.com/3/17/HD/720p/197/3941970.mp4",
-            "1080p HD" : "https://bmedia1.fsanook.com/3/17/HD/1080p/197/3941970.mp4"
+            // "240p" : "https://bmedia1.fsanook.com/3/17/HD/240p/197/3941970.mp4",
+            // "360p" : "https://bmedia1.fsanook.com/3/17/HD/360p/197/3941970.mp4",
+            // "720p HD" : "https://bmedia1.fsanook.com/3/17/HD/720p/197/3941970.mp4",
+            // "1080p HD" : "https://bmedia1.fsanook.com/3/17/HD/1080p/197/3941970.mp4"
+            '240p' : 'http://1251132611.vod2.myqcloud.com/4126dd3evodtransgzp1251132611/8a592f8b9031868222950257296/f0.f20.mp4',
+            '360p' : 'http://1251132611.vod2.myqcloud.com/4126dd3evodtransgzp1251132611/8a592f8b9031868222950257296/f0.f40.mp4',
+            '720p HD' :  'http://1251132611.vod2.myqcloud.com/4126dd3evodtransgzp1251132611/8a592f8b9031868222950257296/f0.f40.mp4',
+            '1080p HD' :  'http://1251132611.vod2.myqcloud.com/4126dd3evodtransgzp1251132611/8a592f8b9031868222950257296/f0.f20.mp4'
         },
 
         "autoLevel": true,
@@ -286,7 +290,8 @@ else if(file_type == 'm3u8')
             "user_id": "puvanach@tencent.co.th",
             "license": "hDE3w8QbIgKNEKAaJt9gD9X4RpKhtxSc"
         },
-        "m3u8": "http://prepro.video.sanook.com/liveplay/1092653.m3u8",
+        // "m3u8": "http://prepro.video.sanook.com/liveplay/1092653.m3u8",
+        "m3u8": "https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8",
 
         "autoLevel": true,
         "playerid":"content_video",
