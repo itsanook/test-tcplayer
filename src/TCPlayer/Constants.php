@@ -105,9 +105,16 @@ class Constants {
         "All UI is responsive",
         TRUE
       ),
+      "ad-default" => new Testcase(
+        "ad-default.part.html",
+        "Ad: Play",
+        "Linear preroll ad is displayed when the video has autoplay set",
+        "Unable to display ad",
+        FALSE
+      ),
       "ad-autoplay" => new Testcase(
         "ad-autoplay.part.html",
-        "Ad: Autoplay ?",
+        "Ad: Autoplay",
         "Linear preroll ad is displayed when the video has autoplay set",
         "Ads correctly shown every time",
         TRUE
@@ -131,6 +138,13 @@ class Constants {
         "API: Methods",
         "Basic methods such as play, pause, togglePlay and mute are working correctly.",
         "All basic method works correctly.",
+        TRUE
+      ),
+      "api-admeta" => new Testcase(
+        "api-admeta.part.html",
+        "API: Ad Meta",
+        "Able to provide ad meta data info",
+        "Able to provide ad meta data info",
         TRUE
       ),
       "listener" => new Testcase(
