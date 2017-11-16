@@ -140,6 +140,13 @@ class Constants {
         "All basic method works correctly.",
         TRUE
       ),
+      "api-admeta" => new Testcase(
+        "api-admeta.part.html",
+        "API: Ad Meta",
+        "Able to provide ad meta data info",
+        "Able to provide ad meta data info",
+        TRUE
+      ),
       "listener" => new Testcase(
         "api-listener.part.html",
         "API: Events",
