@@ -108,9 +108,9 @@ class Constants {
       "ad-default" => new Testcase(
         "ad-default.part.html",
         "Ad: Play",
-        "Linear preroll ad is displayed when the video has autoplay set",
-        "Unable to display ad",
-        FALSE
+        "Linear preroll ad is displayed when the video is started",
+        "Linear preroll ad is displayed when the video is started",
+        TRUE
       ),
       "ad-autoplay" => new Testcase(
         "ad-autoplay.part.html",
