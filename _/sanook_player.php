@@ -103,8 +103,8 @@ else if(ads_type == 'dfp')
     else
     { // mobile
         console.log('mobile');
-		// linears_link  = vast_linear[1];
-		linears_link  = vast_linear[0];
+		linears_link  = vast_linear[1];
+		// linears_link  = vast_linear[0];
 
     }
 }
