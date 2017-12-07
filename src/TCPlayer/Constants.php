@@ -59,8 +59,8 @@ class Constants {
         "thumbnail.part.html",
         "Thumbnail",
         "Thumbnail is shown",
-        "1) Does not support IE11",
-        FALSE
+        "Thumbnail is shown",
+        TRUE
       ),
       "seperator-00" => "<hr/>",
       "play" => new Testcase(
