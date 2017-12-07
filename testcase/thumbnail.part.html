@@ -1,12 +1,17 @@
 <div id="tcplayer"></div>
 <script>
   var player = new TcPlayer('tcplayer', {
-     m3u8: 'http://prepro.video.sanook.com/liveplay/1092653.m3u8',
+    m3u8: 'http://prepro.video.sanook.com/liveplay/1092653.m3u8',
     autoplay: false,
     coverpic: '//via.placeholder.com/532x300',
     width: 532,
     height: 300,
-    thumbnails: 'vendor-ext/sanook/1092653.vtt'
+    thumbnails: 'vendor-ext/sanook/1092653.vtt',
+    auth: {
+      user_id: 'Ake@tencent.co.th',
+      app_id: 'G54eGYZ4AQavvYkK',
+      license: 'aErVaSe2DvN5ze3658wJjYqaK3tTIPuF'
+    }
   });
 
   // 9031868223471745890
