@@ -67,8 +67,8 @@ class Constants {
         "play.part.html",
         "Play",
         "Able to playback the video and audio",
-        "1) No option to disable the report piggybacking",
-        FALSE
+        "Able to playback the video and audio",
+        TRUE
       ),
       "play-multi-birates" => new Testcase(
         "multi-bitrates.part.html",
