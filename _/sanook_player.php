@@ -83,7 +83,7 @@ vast_linear[3] = 'http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=is&c=23&
 vast_linear[4] = 'http://backoffice.video.sanook.com/communitygroup_/20140107-preload-Dplusfeb.html';
 vast_linear[5] = 'http://backoffice.video.sanook.com/communitygroup_/otv_ads.xml'; */
 
-var  vast_midroll = "http://myaday.net/c/adskip.php";
+var  vast_midroll = "http://bs.serving-sys.com/Serving?cn=display&c=23&pl=VAST&pli=20266289&PluID=0&pos=5471&ord=419529&cim=1";
 var vast_postroll = "http://myaday.net/c/adskip.php";
 
 var ads_type = '<?=$_GET['ads_type']?>';
