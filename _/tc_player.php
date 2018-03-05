@@ -227,15 +227,15 @@ if(file_type == 'mp4')
         },
         "mp4" :
         {
-            // "240p" : "https://bmedia1.fsanook.com/3/17/HD/240p/197/3941970.mp4",
-            // "360p" : "https://bmedia1.fsanook.com/3/17/HD/360p/197/3941970.mp4",
-            // "720p HD" : "https://bmedia1.fsanook.com/3/17/HD/720p/197/3941970.mp4",
-            // "1080p HD" : "https://bmedia1.fsanook.com/3/17/HD/1080p/197/3941970.mp4"
+             "240p" : "https://bmedia1.fsanook.com/3/17/HD/240p/197/3941970.mp4",
+             "360p" : "https://bmedia1.fsanook.com/3/17/HD/360p/197/3941970.mp4",
+             "720p HD" : "https://bmedia1.fsanook.com/3/17/HD/720p/197/3941970.mp4",
+             "1080p HD" : "https://bmedia1.fsanook.com/3/17/HD/1080p/197/3941970.mp4"
 
-            '240p': 'http://1251132611.vod2.myqcloud.com/4126dd3evodtransgzp1251132611/8a592f8b9031868222950257296/f0.f20.mp4',
-            '360p': 'http://1251132611.vod2.myqcloud.com/4126dd3evodtransgzp1251132611/8a592f8b9031868222950257296/f0.f40.mp4',
-            '720p HD': 'http://1251132611.vod2.myqcloud.com/4126dd3evodtransgzp1251132611/8a592f8b9031868222950257296/f0.f40.mp4',
-            '1080p HD': 'http://1251132611.vod2.myqcloud.com/4126dd3evodtransgzp1251132611/8a592f8b9031868222950257296/f0.f20.mp4'
+            //'240p': 'http://1251132611.vod2.myqcloud.com/4126dd3evodtransgzp1251132611/8a592f8b9031868222950257296/f0.f20.mp4',
+            //'360p': 'http://1251132611.vod2.myqcloud.com/4126dd3evodtransgzp1251132611/8a592f8b9031868222950257296/f0.f40.mp4',
+            //'720p HD': 'http://1251132611.vod2.myqcloud.com/4126dd3evodtransgzp1251132611/8a592f8b9031868222950257296/f0.f40.mp4',
+            //'1080p HD': 'http://1251132611.vod2.myqcloud.com/4126dd3evodtransgzp1251132611/8a592f8b9031868222950257296/f0.f20.mp4'
         },
 
         "autoLevel": true,
