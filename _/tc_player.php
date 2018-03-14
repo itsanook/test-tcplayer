@@ -296,8 +296,8 @@ else if(file_type == 'm3u8')
             "user_id": "puvanach@tencent.co.th",
             "license": "hDE3w8QbIgKNEKAaJt9gD9X4RpKhtxSc"
         },
-        // "m3u8": "http://prepro.video.sanook.com/liveplay/1092653.m3u8",
-        "m3u8": "https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8",
+        "m3u8": "http://prepro.video.sanook.com/liveplay/1092653.m3u8",
+        //"m3u8": "https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8",
 
         "autoLevel": true,
         "playerid":"content_video",
