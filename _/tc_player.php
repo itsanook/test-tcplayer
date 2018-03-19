@@ -277,7 +277,7 @@ if(file_type == 'mp4')
             playerOBJ.playerEvent(e);
         },
         onAdError: function(e){
-            console.log(e);
+            //console.log(e);
             showDebug(null, 'Ads event: '+e.l);
         },
         onAdEvent: function(e) {
