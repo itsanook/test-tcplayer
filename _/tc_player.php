@@ -339,7 +339,7 @@ else if(file_type == 'm3u8')
             playerOBJ.playerEvent(e);
         },
         onAdError: function(e){
-            console.log(e);
+            //console.log(e);
             showDebug(null, 'Ads event: '+e.l);
         },
         onAdEvent: function(e) {
@@ -491,7 +491,7 @@ var Ads = function()
 
     /*Ads Event Management*/
     Ads.prototype.onAdEvent = function (event) {
-        console.log(event.type);
+        //console.log(event.type);
         switch(event.type){
             case 'adTimeUpdate':
                 var remainingTime = event.remainingTime;
