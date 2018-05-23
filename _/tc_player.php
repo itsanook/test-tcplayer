@@ -430,7 +430,7 @@ var Ads = function()
                var currentTime = this.currentTime();
                var durationTime = this.durationTime();
                var add_mid_offset = Math.round(durationTime/2);
-            //    console.log('duration time: '+durationTime+',current time: '+currentTime);
+               console.log('duration time: '+durationTime+',current time: '+currentTime);
                if(!state.midrollPlayed && currentTime > add_mid_offset)
                {
                    console.log('midroll');
