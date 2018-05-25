@@ -185,8 +185,8 @@ else{
 					'image': paramsObj.image,
 					'tracks': [trackObj],
 					'autostart': false,
-					'width': '615',
-					'height': '400',
+					'width': '100%',
+					'height': '100%',
 					'startparam':'start',
 					'androidhls': true,
 					skin: {
