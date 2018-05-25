@@ -2,6 +2,7 @@
 <head>
 <title>Test Player</title>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="http://p3.isanook.com/de/0/shared/js/vendors/jquery-2.1.4.min.js" type="text/javascript"></script>
 <script src="http://p3.isanook.com/sh/0/js/mobile-detect.min.js"></script>
 <script src="http://video.sanook.com/assets/vi/js/jwplayer-7.8.7/jwplayer.js"></script>
