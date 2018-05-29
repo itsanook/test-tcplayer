@@ -242,8 +242,8 @@ if(file_type == 'mp4')
         "autoLevel": true,
         "playerid":"content_video",
         // "coverpic": {"style":"stretch", "src":"http://p3.isanook.com/vi/0/ud/3/17/jpg/197/3941970.jpg"},
-        "width" : '640',
-        "height" : '360',
+        "width" : '320',
+        "height" : '240',
         "autoplay" : false,
 
         "watermark": {
@@ -305,8 +305,8 @@ else if(file_type == 'm3u8')
         "coverpic": {"style":"stretch", "src":"http://p3.isanook.com/vi/0/ud/3/17/jpg/197/3941970.jpg"},
         // "width": '100%',
         // "height": 'auto',
-        "width" : '640',
-        "height" : '360',
+        "width" : '320',
+        "height" : '240',
         "autoplay" : false,
         "watermark": {
             "image": "http://video.sanook.com/assets/vi/di/logo_sn.png",
