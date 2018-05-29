@@ -204,8 +204,8 @@ var paramsObj = {
             'auto': 'false',
             'plugin': 1,
             'logo_file': '1',
-            'embed_width': '640',
-            'embed_height': '360',
+            'embed_width': '320',
+            'embed_height': '240',
             'controlbar': 'bottom',
             'skin': 'http://video.sanook.com/assets/vi/js/jwplayer6.12/skins/premium/glow.xml'
         },
